@@ -1,0 +1,8 @@
+{
+    "id": "challenge-01",
+    "title": "Basic Arithmetic Circuit",
+    "description": "Design a circuit that verifies that the sum of two numbers equals a given total.",
+    "circuitPath": "circuits/arithmetic.circom",
+    "points": 100
+  }
+  

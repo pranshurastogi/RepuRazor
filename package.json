@@ -1,0 +1,40 @@
+{
+  "name": "repurazor",
+  "version": "1.0.0",
+  "description": "A CLI tool for zero-knowledge proof challenges and smart contract integration using zkverifyjs.",
+  "main": "index.js",
+  "bin": {
+    "repurazor": "./bin/index.js"
+  },
+  "scripts": {
+    "start": "node bin/index.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranshurastogi/RepuRazor.git"
+  },
+  "keywords": [
+    "zk",
+    "zero-knowledge",
+    "CLI",
+    "tooling",
+    "gamification",
+    "zkverifyjs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pranshurastogi/RepuRazor/issues"
+  },
+  "homepage": "https://github.com/pranshurastogi/RepuRazor#readme",
+  "dependencies": {
+    "zkverifyjs": "^0.6.0",
+    "commander": "^10.0.0",
+    "inquirer": "^9.0.0",
+    "chalk": "^5.0.0",
+    "axios": "^1.0.0",
+    "ethers": "^6.0.0"
+  }
+}
