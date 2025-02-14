@@ -30,11 +30,22 @@
   },
   "homepage": "https://github.com/pranshurastogi/RepuRazor#readme",
   "dependencies": {
-    "zkverifyjs": "^0.6.0",
-    "commander": "^10.0.0",
-    "inquirer": "^9.0.0",
-    "chalk": "^5.0.0",
     "axios": "^1.0.0",
-    "ethers": "^6.0.0"
+    "blessed": "^0.1.81",
+    "chalk": "^5.4.1",
+    "circom": "^0.5.46",
+    "commander": "^10.0.1",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5",
+    "hardhat": "^2.22.18",
+    "inquirer": "^9.3.7",
+    "openai": "^4.84.1",
+    "winston": "^3.17.0",
+    "zkverifyjs": "^0.6.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/node": "^22.13.2",
+    "typescript": "^5.7.3"
   }
 }

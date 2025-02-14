@@ -1,0 +1,207 @@
+[
+    {
+      "id": "zk-001",
+      "category": "zk",
+      "difficulty": "simple",
+      "title": "ZK Simple Quiz 1",
+      "question": "What does ZK stand for in cryptography?",
+      "options": ["Zero Knowledge", "Zeta Key", "ZKite", "Zone Key"],
+      "correctAnswer": "Zero Knowledge",
+      "hint": "It means proving something without revealing the secret."
+    },
+    {
+      "id": "zk-002",
+      "category": "zk",
+      "difficulty": "moderate",
+      "title": "ZK Moderate Quiz 1",
+      "question": "Which of these is a common zero-knowledge proof protocol?",
+      "options": ["RSA", "Groth16", "AES", "SHA256"],
+      "correctAnswer": "Groth16",
+      "hint": "It's a succinct proof system."
+    },
+    {
+      "id": "zk-003",
+      "category": "zk",
+      "difficulty": "hard",
+      "title": "ZK Hard Quiz 1",
+      "question": "Which elliptic curve is commonly used in Groth16 implementations?",
+      "options": ["BN254", "secp256k1", "Curve25519", "P-256"],
+      "correctAnswer": "BN254",
+      "hint": "It's also known as BN128/BN254."
+    },
+    {
+      "id": "zk-004",
+      "category": "zk",
+      "difficulty": "simple",
+      "title": "ZK Simple Quiz 2",
+      "question": "A zero-knowledge proof proves a statement without revealing what?",
+      "options": ["The fact", "The secret", "The proof", "The public key"],
+      "correctAnswer": "The secret",
+      "hint": "The secret input remains hidden."
+    },
+  
+    {
+      "id": "educhain-001",
+      "category": "educhain",
+      "difficulty": "simple",
+      "title": "Educhain Simple Quiz 1",
+      "question": "What is EduChain primarily used for?",
+      "options": ["Supply chain", "Education", "Healthcare", "Finance"],
+      "correctAnswer": "Education",
+      "hint": "It focuses on academic credentials."
+    },
+    {
+      "id": "educhain-002",
+      "category": "educhain",
+      "difficulty": "moderate",
+      "title": "Educhain Moderate Quiz 1",
+      "question": "Which technology underpins EduChain?",
+      "options": ["Blockchain", "Cloud Computing", "AI", "Quantum Computing"],
+      "correctAnswer": "Blockchain",
+      "hint": "It is decentralized."
+    },
+    {
+      "id": "educhain-003",
+      "category": "educhain",
+      "difficulty": "hard",
+      "title": "Educhain Hard Quiz 1",
+      "question": "Which of the following is a benefit of EduChain?",
+      "options": ["Centralized control", "Immutable record", "High latency", "Manual verification"],
+      "correctAnswer": "Immutable record",
+      "hint": "Records cannot be altered."
+    },
+    {
+      "id": "educhain-004",
+      "category": "educhain",
+      "difficulty": "simple",
+      "title": "Educhain Simple Quiz 2",
+      "question": "EduChain is intended to create a fairer system in what sector?",
+      "options": ["Gaming", "Finance", "Education", "E-commerce"],
+      "correctAnswer": "Education",
+      "hint": "It deals with academic institutions."
+    },
+  
+    {
+      "id": "arbitrium-001",
+      "category": "arbitrium",
+      "difficulty": "simple",
+      "title": "Arbitrium Simple Quiz 1",
+      "question": "Arbitrium is associated with which blockchain scaling solution?",
+      "options": ["Layer 1", "Layer 2", "Sidechain", "Sharding"],
+      "correctAnswer": "Layer 2",
+      "hint": "It helps scale Ethereum."
+    },
+    {
+      "id": "arbitrium-002",
+      "category": "arbitrium",
+      "difficulty": "moderate",
+      "title": "Arbitrium Moderate Quiz 1",
+      "question": "What is a key benefit of Arbitrium?",
+      "options": ["Increased fees", "Reduced transaction speed", "Scalability", "Centralization"],
+      "correctAnswer": "Scalability",
+      "hint": "It reduces network congestion."
+    },
+    {
+      "id": "arbitrium-003",
+      "category": "arbitrium",
+      "difficulty": "hard",
+      "title": "Arbitrium Hard Quiz 1",
+      "question": "Arbitrium leverages which technology to achieve faster transactions?",
+      "options": ["Off-chain computation", "On-chain sharding", "Proof of Work", "Sidechains"],
+      "correctAnswer": "Off-chain computation",
+      "hint": "It uses off-chain solutions."
+    },
+    {
+      "id": "arbitrium-004",
+      "category": "arbitrium",
+      "difficulty": "simple",
+      "title": "Arbitrium Simple Quiz 2",
+      "question": "Arbitrium is primarily designed for which ecosystem?",
+      "options": ["Bitcoin", "Ethereum", "Polkadot", "Solana"],
+      "correctAnswer": "Ethereum",
+      "hint": "It scales Ethereum transactions."
+    },
+  
+    {
+      "id": "zkverify-001",
+      "category": "zkverify",
+      "difficulty": "simple",
+      "title": "zkverify Simple Quiz 1",
+      "question": "zkVerify is used for what purpose?",
+      "options": ["Proof verification", "Data storage", "Smart contract execution", "Cryptocurrency mining"],
+      "correctAnswer": "Proof verification",
+      "hint": "It confirms zero-knowledge proofs."
+    },
+    {
+      "id": "zkverify-002",
+      "category": "zkverify",
+      "difficulty": "moderate",
+      "title": "zkverify Moderate Quiz 1",
+      "question": "Which type of proofs does zkVerify support?",
+      "options": ["PoW", "ZK-SNARKs", "RSA signatures", "Merkle proofs"],
+      "correctAnswer": "ZK-SNARKs",
+      "hint": "They are succinct proofs."
+    },
+    {
+      "id": "zkverify-003",
+      "category": "zkverify",
+      "difficulty": "hard",
+      "title": "zkverify Hard Quiz 1",
+      "question": "What is one of the advanced features of zkVerify?",
+      "options": ["Low cost", "Instant finality", "High security", "All of the above"],
+      "correctAnswer": "All of the above",
+      "hint": "It aims to provide multiple benefits."
+    },
+    {
+      "id": "zkverify-004",
+      "category": "zkverify",
+      "difficulty": "simple",
+      "title": "zkverify Simple Quiz 2",
+      "question": "zkVerify is designed to verify proofs on which type of network?",
+      "options": ["Private", "Public", "Permissioned", "Decentralized"],
+      "correctAnswer": "Decentralized",
+      "hint": "It works on decentralized networks."
+    },
+  
+    {
+      "id": "crypto-001",
+      "category": "cryptography",
+      "difficulty": "simple",
+      "title": "Crypto Simple Quiz 1",
+      "question": "Which algorithm is primarily used for encryption?",
+      "options": ["RSA", "AES", "SHA256", "ECDSA"],
+      "correctAnswer": "AES",
+      "hint": "It's symmetric encryption."
+    },
+    {
+      "id": "crypto-002",
+      "category": "cryptography",
+      "difficulty": "moderate",
+      "title": "Crypto Moderate Quiz 1",
+      "question": "What does ECDSA stand for?",
+      "options": ["Elliptic Curve Digital Signature Algorithm", "Encrypted Curve Data Security Algorithm", "Elliptical Cryptographic Data Signature Algorithm", "Extended Curve Digital Signature Algorithm"],
+      "correctAnswer": "Elliptic Curve Digital Signature Algorithm",
+      "hint": "It's a standard for digital signatures."
+    },
+    {
+      "id": "crypto-003",
+      "category": "cryptography",
+      "difficulty": "hard",
+      "title": "Crypto Hard Quiz 1",
+      "question": "Which of the following is NOT a hash function?",
+      "options": ["SHA256", "MD5", "AES", "RIPEMD-160"],
+      "correctAnswer": "AES",
+      "hint": "AES is for encryption, not hashing."
+    },
+    {
+      "id": "crypto-004",
+      "category": "cryptography",
+      "difficulty": "simple",
+      "title": "Crypto Simple Quiz 2",
+      "question": "What is the primary purpose of a hash function?",
+      "options": ["Encryption", "Signing", "Data integrity", "Compression"],
+      "correctAnswer": "Data integrity",
+      "hint": "It creates a unique fingerprint of data."
+    }
+  ]
+  

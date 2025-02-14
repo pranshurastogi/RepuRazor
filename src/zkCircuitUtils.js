@@ -1,60 +1,64 @@
-const { exec } = require('child_process');
-const zkverifyjs = require('zkverifyjs'); // Ensure you install the package with a lowercase name
+// src/zkCircuitUtils.js
+const { exec } = require("child_process");
+const util = require("util");
+const execAsync = util.promisify(exec);
+const zkverifyjs = require("zkverifyjs"); // Production-grade zkVerifyJS library
 
 /**
  * Compiles a ZK circuit using circom.
  * @param {string} circuitPath - The file path to the circuit.
- * @returns {Promise<string>} - Resolves with the compiler output (stdout).
+ * @returns {Promise<string>} - Resolves with the compiler output.
  */
-function compileCircuit(circuitPath) {
-  return new Promise((resolve, reject) => {
-    exec(`circom ${circuitPath} --r1cs --wasm --sym`, (error, stdout, stderr) => {
-      if (error) {
-        console.error(`Error compiling circuit at ${circuitPath}: ${stderr}`);
-        return reject(new Error(`Compilation failed: ${stderr}`));
-      }
-      console.log(`Compilation output for ${circuitPath}: ${stdout}`);
-      resolve(stdout);
-    });
-  });
+async function compileCircuit(circuitPath) {
+  try {
+    const { stdout, stderr } = await execAsync(`circom ${circuitPath} --r1cs --wasm --sym`);
+    if (stderr) {
+      console.error(`Compilation stderr: ${stderr}`);
+    }
+    console.log(`Compilation output for ${circuitPath}: ${stdout}`);
+    return stdout;
+  } catch (error) {
+    console.error(`Error compiling circuit at ${circuitPath}:`, error);
+    throw new Error(`Compilation failed: ${error.message}`);
+  }
 }
 
 /**
- * Generates a proof from the compiled circuit and input data.
- * (This is a placeholder – replace with actual logic using zkverifyjs or other proof generators.)
- * @param {any} circuit - The compiled circuit data.
+ * Generates a Groth16 proof using zkVerifyJS.
+ * @param {any} circuit - The compiled circuit output.
  * @param {any} inputData - The input data for the circuit.
- * @returns {Promise<Object>} - Resolves with an object containing proof and public signals.
+ * @returns {Promise<Object>} - Resolves with an object containing the proof and public signals.
  */
 async function generateProof(circuit, inputData) {
   try {
-    // Replace this with actual proof generation logic.
-    // For example, you might call: 
-    // const result = await zkverifyjs.generateProof({ circuit, inputData });
-    const proofResult = {
-      proof: 'sample_proof_data',
-      publicSignals: [] // Replace with actual public signals.
-    };
-    console.log('Proof generated successfully:', proofResult);
+    // Call the production-grade proof generation function.
+    // Adjust the parameter structure according to the actual zkVerifyJS API.
+    const proofResult = await zkverifyjs.generateProof({
+      circuit: circuit,
+      inputData: inputData,
+      proofType: "groth16",
+      verifier: { library: zkverifyjs.Library.snarkjs, curve: zkverifyjs.CurveType.bn128 }
+    });
+    console.log("Proof generated successfully:", proofResult);
     return proofResult;
   } catch (error) {
-    console.error('Error generating proof:', error);
+    console.error("Error generating proof:", error);
     throw new Error(`Proof generation error: ${error.message}`);
   }
 }
 
 /**
- * Submits a proof using zkverifyjs.
+ * Submits a proof using zkVerifyJS.
  * @param {Object} proof - The proof object to submit.
  * @returns {Promise<Object>} - Resolves with the transaction receipt.
  */
 async function submitProof(proof) {
   try {
     const txReceipt = await zkverifyjs.submitProof(proof);
-    console.log('Proof submitted. Transaction receipt:', txReceipt);
+    console.log("Proof submitted. Transaction receipt:", txReceipt);
     return txReceipt;
   } catch (error) {
-    console.error('Error submitting proof:', error);
+    console.error("Error submitting proof:", error);
     throw new Error(`Proof submission error: ${error.message}`);
   }
 }
@@ -63,15 +67,11 @@ async function submitProof(proof) {
  * Watches the verification process for a given transaction hash.
  * @param {string} txHash - The transaction hash to monitor.
  * @param {Function} callback - A callback function to handle status updates.
+ * @returns {Promise<void>}
  */
-function watchVerification(txHash, callback) {
+async function watchVerification(txHash, callback) {
   try {
-    zkverifyjs.watchVerification(txHash, (status) => {
-      console.log(`Verification status for txHash ${txHash}:`, status);
-      if (typeof callback === 'function') {
-        callback(status);
-      }
-    });
+    await zkverifyjs.watchVerification(txHash, callback);
   } catch (error) {
     console.error(`Error watching verification for txHash ${txHash}:`, error);
     throw new Error(`Watch verification error: ${error.message}`);

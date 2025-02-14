@@ -1,12 +1,30 @@
 const fs = require('fs');
 const path = require('path');
 
-function loadChallenge(challengeId) {
-  const filePath = path.join(__dirname, '../challenges', `${challengeId}.json`);
+function loadAllChallenges() {
+  const filePath = path.join(__dirname, '../challenges/quiz.json');
   if (!fs.existsSync(filePath)) {
-    throw new Error(`Challenge ${challengeId} not found.`);
+    throw new Error('Quiz challenge file not found.');
   }
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
 
-module.exports = { loadChallenge };
+function loadChallengesByCategory(category) {
+  const all = loadAllChallenges();
+  return all.filter(ch => ch.category.toLowerCase() === category.toLowerCase());
+}
+
+function loadChallenge(challengeId) {
+  const all = loadAllChallenges();
+  const challenge = all.find(ch => ch.id === challengeId);
+  if (!challenge) {
+    throw new Error(`Challenge with id ${challengeId} not found.`);
+  }
+  return challenge;
+}
+
+module.exports = {
+  loadAllChallenges,
+  loadChallengesByCategory,
+  loadChallenge
+};

@@ -1,0 +1,8 @@
+{
+  "id": "challenge-04",
+  "title": "Matrix Multiplication Validator",
+  "description": "Design a circuit that verifies the multiplication of two 2x2 matrices.",
+  "circuitPath": "circuits/matrixMultiplication.circom",
+  "points": 100,
+  "difficulty": "hard"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "challenge-03",
+  "title": "Quadratic Equation Solver",
+  "description": "Create a circuit that proves a number is a solution to a given quadratic equation.",
+  "circuitPath": "circuits/quadratic.circom",
+  "points": 150,
+  "difficulty": "hard"
+}

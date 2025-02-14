@@ -1,0 +1,8 @@
+{
+  "id": "challenge-02",
+  "title": "Multiplication Circuit",
+  "description": "Build a circuit that verifies the product of two numbers.",
+  "circuitPath": "circuits/multiplication.circom",
+  "points": 120,
+  "difficulty": "hard"
+}

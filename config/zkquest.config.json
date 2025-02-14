@@ -1,11 +1,11 @@
 {
     "arbitrum": {
       "rpcUrl": "https://arbitrum-testnet.rpc.url",
-      "privateKey": "YOUR_PRIVATE_KEY"
+      "privateKey": "PRIVATE_KEY"
     },
     "eduChain": {
       "rpcUrl": "https://educhain-testnet.rpc.url",
-      "privateKey": "YOUR_PRIVATE_KEY"
+      "privateKey": "PRIVATE_KEY"
     }
   }
   
